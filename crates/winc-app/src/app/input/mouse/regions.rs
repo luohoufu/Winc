@@ -8,7 +8,7 @@ impl App {
         let sidebar = self.layout.sidebar;
 
         let spilled = self.in_commit_overflow(x, y) || self.in_result_overflow(x, y);
-        if if sidebar.x >= self.layout.window.w || !(sidebar.contains(x, y) || spilled) {
+        if sidebar.x >= self.layout.window.w || !(sidebar.contains(x, y) || spilled) {
             return None;
         }
 
